@@ -66,12 +66,13 @@ def UserForGenre( genero : str ):
 # Endpoint 3
 
 @app.get('/UsersRecommend/{anio}')
-def UsersRecommend( anio : int ):
+def UsersRecommend( año : int ):
     # Filtrar el dataset por el año  deseado
-    df_filtrado = df_1_2[df_1_2['posted'] == anio]
+    df_filtrado = df_1_2[df_1_2['posted'] == año]
     # Agrupar los datos por el app_name  y la columna boolena recomend  
-    df_agrupado = df_filtrado.groupby('app_name')['recommend'].value_counts().reset_index()
-    df_ordenado = df_agrupado.sort_values(by='count', ascending=False)
+    #df_agrupado = df_filtrado.groupby('app_name')['recommend'].value_counts().reset_index()
+    df_grouped = df_filtrado.groupby(['app_name', 'recommend'], as_index=False).agg({ 'recommend': 'count'})
+    df_ordenado = df_grouped.sort_values(by='recommend', ascending=False)
     app_names = df_ordenado['app_name'].head(3).tolist()
     # Crear una lista de diccionarios en el formato requerido
     lista_puestos = [{"Puesto " + str(i+1): app_name} for i, app_name in enumerate(app_names)]
