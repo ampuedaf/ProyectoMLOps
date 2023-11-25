@@ -92,7 +92,7 @@ Se puede revisar el paso a paso documentado de este proceso en el siguiente link
 <a href='https://postimg.cc/N2D3mQb1' target='_blank'><img src='https://i.postimg.cc/nMfn8zDw/image.png' border='0' alt='image'/></a>
 El resultado final consiste en una API renderizada con las seis requeridas.
 
-Se puede acceder a ella en el siguiente link:[ API](https://https://fastapi-rrx1.onrender.com/docs#//default " API")
+Se puede acceder a ella en el siguiente link:[ API](https://fastapi-rrx1.onrender.com/docs#/default " API")
 
 Se puede revisar el paso a paso documentado de las seis funciones en el siguiente link: Notebook Funciones.
 
