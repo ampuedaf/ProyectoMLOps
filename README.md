@@ -89,10 +89,10 @@ Se puede revisar el paso a paso documentado de este proceso en el siguiente link
 - Se puede revisar el paso a paso documentado del proceso de ML en la sección final del siguiente link: Notebook ML.
 
 ## Resultado.
-<a href='https://postimg.cc/PCtnTxX9' target='_blank'><img src='https://i.postimg.cc/wjNq5ySq/image.png' border='0' alt='image'/></a>
+<a href='https://postimg.cc/N2D3mQb1' target='_blank'><img src='https://i.postimg.cc/nMfn8zDw/image.png' border='0' alt='image'/></a>
 El resultado final consiste en una API renderizada con las seis requeridas.
 
-Se puede acceder a ella en el siguiente link:[ API](https://fastapi-5q3t.onrender.com/docs#/default " API")
+Se puede acceder a ella en el siguiente link:[ API](https://https://fastapi-rrx1.onrender.com/docs#//default " API")
 
 Se puede revisar el paso a paso documentado de las seis funciones en el siguiente link: Notebook Funciones.
 
