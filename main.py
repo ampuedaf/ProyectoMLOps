@@ -67,6 +67,10 @@ def UserForGenre( genero : str ):
 
 @app.get('/UsersRecommend/{anio}')
 def UsersRecommend( año : int ):
+    """
+    Esta función al colocar cualquier año, devolvera el top 3 de juegos MAS  recomendados 
+    por usuario.
+    """
     # Filtrar el dataset por el año  deseado
     df_filtrado = df_1_2[df_1_2['posted'] == año]
     # Agrupar los datos por el app_name  y la columna boolena recomend  
@@ -81,6 +85,10 @@ def UsersRecommend( año : int ):
 #Endpoint 4
 @app.get('/UsersWorstDeveloper/{anio}')
 def UsersWorstDeveloper(anio:int):
+    """
+    Esta función devuelve el top 3 de las empresas desarrolladoras con MENOS  juegos  recomendados
+    por los usuarios.
+    """
      # Filtrar el dataset por el año  deseado
     df_filtrado = df_1_2[df_1_2['posted'] == anio]
     df_grouped = df_filtrado.groupby(['user_id', 'recommend'], as_index=False).agg({'developer': 'first', 'recommend': 'count'})
@@ -93,6 +101,10 @@ def UsersWorstDeveloper(anio:int):
 #Endpoint 5
 @app.get('/Sentiment_analisis/{desarrolladora}')
 def Sentiment_analisis( desarrolladora : str ): 
+    """
+    Al colocar el nombre de una empresas desarrolladora , devuelve la cantidad total de registros
+    de reseñas de usuarios que se encuentran categorizados con un analisis de sentimiento como valor.
+    """
     # Filtrar las filas del DataFrame para  el developer dado
     df_filtered = df_1_3[df_1_3['developer'] == desarrolladora]
     # Cuenta la cantidad de registros para cada categoría de sentimiento
